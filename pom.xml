@@ -56,11 +56,6 @@
             <version>LATEST</version>
         </dependency>
         <dependency>
-            <groupId>me.ryanhamshire</groupId>
-            <artifactId>GriefPrevention</artifactId>
-            <version>LATEST</version>
-        </dependency>
-        <dependency>
             <groupId>com.massivecraft</groupId>
             <artifactId>factions</artifactId>
             <version>1.8.0</version>

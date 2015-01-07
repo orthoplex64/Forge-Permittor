@@ -1,0 +1,9 @@
+name: Forge Permittor
+main: com.fantasycraft.forgepermittor.ForgePermittor
+version: 0.3-BETA
+softdepend: [Towny, WorldGuard, Factions, GriefPervention]
+depend: []
+commands:
+    forgepermittor:
+        permission: forgepermittor.command
+        aliases: [fp]
