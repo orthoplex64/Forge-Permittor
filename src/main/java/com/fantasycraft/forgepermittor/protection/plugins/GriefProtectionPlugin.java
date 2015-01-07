@@ -9,8 +9,10 @@ import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import me.ryanhamshire.GriefPrevention.Messages;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 /**
  * Created by thomas on 8/16/2014.
@@ -83,7 +85,8 @@ public class GriefProtectionPlugin implements IprotectionPlugin {
     private boolean allowbuild(Player player, Location location)
     {
         Claim claim = GriefPrevention.instance.dataStore.getClaimAt(location, true, null);
-        if (claim != null && claim.allowBuild(player) != null)
+        ItemStack handItem = player.getItemInHand();
+        if (claim != null && claim.allowBuild(player, handItem == null ? Material.AIR : handItem.getType()) != null)
             return false;
         return true;
     }
